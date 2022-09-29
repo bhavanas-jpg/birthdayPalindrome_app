@@ -16,12 +16,13 @@ function clickHandler(e){
     var isPalindrome = checkPalindromeForAllDateFormats(date);
     
     if(isPalindrome){
+        outputText.style.display = "block";
         outputText.innerText = "Yay! your birthday is palindrome!!"
     }
     else{
         var [ctr, nextDate] = getNextPalindromeDate(date);
-        outputText.innerText = `The next palindrome date is ${nextDate.day}
-                               -${nextDate.month}-${nextDate.year},
+        outputText.style.display = "block";
+        outputText.innerText = `The next palindrome date is ${nextDate.day}-${nextDate.month}-${nextDate.year},
                                you missed it by ${ctr} days!`
     }
   }
